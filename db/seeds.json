@@ -1,74 +1,50 @@
 [
   {
     "first_name": "James",
-    "last_name": "Shaw",
-    "start_date": "08/14/18",
-    "field_start_date": "08/14/03"
+    "last_name": "Shaw"
   },
   {
     "first_name": "Jason",
-    "last_name": "Stewart",
-    "start_date": "08/14/18",
-    "field_start_date": "08/14/03"
+    "last_name": "Stewart"
   },
   {
     "first_name": "Matt",
-    "last_name": "Solle",
-    "start_date": "08/14/16",
-    "field_start_date": "08/14/16"
+    "last_name": "Solle"
   },
   {
     "first_name": "Ben",
-    "last_name": "Greijn-Lautier",
-    "start_date": "08/14/19",
-    "field_start_date": "08/14/17"
+    "last_name": "Greijn-Lautier"
   },
   {
     "first_name": "John",
-    "last_name": "Kreisher",
-    "start_date": "08/14/18",
-    "field_start_date": "08/14/03"
+    "last_name": "Kreisher"
   },
   {
     "first_name": "Lisa",
-    "last_name": "Mae",
-    "start_date": "08/14/18",
-    "field_start_date": "08/14/03"
+    "last_name": "Mae"
   },
   {
     "first_name": "Phil",
-    "last_name": "Miller",
-    "start_date": "08/14/18",
-    "field_start_date": "08/14/03"
+    "last_name": "Miller"
   },
   {
     "first_name": "Sam",
-    "last_name": "Thompson",
-    "start_date": "08/14/18",
-    "field_start_date": "08/14/03"
+    "last_name": "Thompson"
   },
   {
     "first_name": "Sarah",
-    "last_name": "Ney",
-    "start_date": "08/14/18",
-    "field_start_date": "08/14/03"
+    "last_name": "Ney"
   },
   {
     "first_name": "Ailis",
-    "last_name": "Grosh",
-    "start_date": "08/14/18",
-    "field_start_date": "08/14/03"
+    "last_name": "Grosh"
   },
   {
     "first_name": "Nick",
-    "last_name": "Schaffner",
-    "start_date": "08/14/18",
-    "field_start_date": "08/14/03"
+    "last_name": "Schaffner"
   },
   {
     "first_name": "Mackenzie",
-    "last_name": "Robinson",
-    "start_date": "08/14/18",
-    "field_start_date": "08/14/03"
+    "last_name": "Robinson"
   }
 ]

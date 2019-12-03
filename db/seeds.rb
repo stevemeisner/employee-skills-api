@@ -14,7 +14,13 @@ employees = JSON.parse(File.read("#{Rails.root}/db/seeds.json")).each do |employ
   Employee.new(
     first_name: employee['first_name'],
     last_name: employee['last_name'],
-    start_date: DateTime.strptime(employee['start_date'], '%m/%d/%y'),
-    field_start_date: DateTime.strptime(employee['field_start_date'], '%m/%d/%y'),
+    start_date: Faker::Date.between(from: 7.years.ago, to: Date.today),
+    field_start_date: Faker::Date.between(from: 20.years.ago, to: Date.today),
   ).save
+end
+
+Employee.all.each do |employee_id|
+  e = Employee.find(employee_id.id)
+  e.skill_list.add(Faker::ProgrammingLanguage.name, Faker::ProgrammingLanguage.name, Faker::ProgrammingLanguage.name, Faker::ProgrammingLanguage.name)
+  e.save
 end
