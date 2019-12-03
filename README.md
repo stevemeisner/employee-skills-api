@@ -1,24 +1,14 @@
-# README
+# API to compliment a Living Employee Directory
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This will aid Sales, Consulting, Scheduling, and Hiring by exposing the skills of the team and gaps therein.
 
-Things you may want to cover:
+Corresponding front end application lives here: [https://github.com/stevemeisner/employee-skills](https://github.com/stevemeisner/employee-skills)
 
-* Ruby version
+## TODO
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- modify/expand the skills categories
+  - Expert in
+  - Preferred
+  - Dislikes
+- add routes and actions for adding and removing tags
+- add avatar upload 
