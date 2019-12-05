@@ -41,11 +41,11 @@ class SkillsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_skill
-      @skill = Skill.find(params[:id])
+      @skill = ActsAsTaggableOn::Tag.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
     def skill_params
-      params.fetch(:skill, {})
+      params.require(:skill).permit(:name)
     end
 end

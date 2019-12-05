@@ -1,5 +1,5 @@
 class EmployeesController < ApplicationController
-  before_action :set_employee, only: [:show, :update, :destroy]
+  before_action :set_employee, only: [:show, :update, :add_skill, :destroy]
 
   # GET /employees
   def index
@@ -38,6 +38,13 @@ class EmployeesController < ApplicationController
     @employee.destroy
   end
 
+   # PATCH /employees/:id/:skill
+  def add_skill
+    @employee.skill_list.add(params[:skill_list], :parse => true)
+    @employee.save
+  end
+
+  # GET /employees/:skill
   def skills
     if params[:skill].present?
       @employees = Employee.tagged_with(params[:skill])
@@ -56,6 +63,6 @@ class EmployeesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def employee_params
-      params.fetch(:employee, {})
+      params.require(:employee).permit(:first_name, :last_name, :start_date, :field_start_date, :skill_list)
     end
 end
