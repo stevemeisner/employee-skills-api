@@ -3,7 +3,7 @@ class SkillsController < ApplicationController
 
   # GET /skills
   def index
-    @skills = Skill.all
+    @skills = ActsAsTaggableOn::Tag.all
 
     render json: @skills
   end

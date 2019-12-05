@@ -38,12 +38,14 @@ class EmployeesController < ApplicationController
     @employee.destroy
   end
 
-  def tagged
-    if params[:tag].present?
-      @employees = Employee.tagged_with(params[:tag])
+  def skills
+    if params[:skill].present?
+      @employees = Employee.tagged_with(params[:skill])
     else
       @employees = Employee.all
     end
+
+    render json: @employees
   end
 
   private
