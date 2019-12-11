@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class EmployeesController < ApplicationController
-  before_action :set_employee, only: [:show, :update, :add_skill, :destroy]
+  before_action :set_employee, only: %i[show update add_skill destroy]
 
   # GET /employees
   def index
@@ -38,31 +40,32 @@ class EmployeesController < ApplicationController
     @employee.destroy
   end
 
-   # PATCH /employees/:id/:skill
+  # PATCH /employees/:id/:skill
   def add_skill
-    @employee.skill_list.add(params[:skill_list], :parse => true)
+    @employee.skill_list.add(params[:skill_list], parse: true)
     @employee.save
   end
 
   # GET /employees/:skill
   def skills
-    if params[:skill].present?
-      @employees = Employee.tagged_with(params[:skill])
-    else
-      @employees = Employee.all
-    end
+    @employees = if params[:skill].present?
+                   Employee.tagged_with(params[:skill])
+                 else
+                   Employee.all
+                 end
 
     render json: @employees
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_employee
-      @employee = Employee.find(params[:id])
-    end
 
-    # Only allow a trusted parameter "white list" through.
-    def employee_params
-      params.require(:employee).permit(:first_name, :last_name, :start_date, :field_start_date, :skill_list)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_employee
+    @employee = Employee.find(params[:id])
+  end
+
+  # Only allow a trusted parameter "white list" through.
+  def employee_params
+    params.require(:employee).permit(:first_name, :last_name, :start_date, :field_start_date, :skill_list)
+  end
 end

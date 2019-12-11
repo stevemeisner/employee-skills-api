@@ -24,10 +24,10 @@ gem 'puma', '~> 3.11'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
-
 gem 'acts-as-taggable-on', '~> 6.0'
 gem 'factory_bot'
 gem 'faker'
+gem 'rubocop'
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 gem 'rack-cors'
