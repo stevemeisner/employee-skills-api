@@ -7,6 +7,11 @@ class EmployeesController < ApplicationController
   def index
     @employees = Employee.all
 
+    # this wasn't going well. I would prefer to do the data transformation server side, but right now it's happening client side.
+    # @employees.map do |employee|
+    #   employee.skill_list = employee.skill_list.flat_map { |skill| { value: skill } }
+    # end
+
     render json: @employees
   end
 
