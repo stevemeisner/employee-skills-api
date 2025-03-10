@@ -11,4 +11,13 @@ Corresponding front end application lives here: [https://github.com/stevemeisner
   - Preferred
   - Dislikes
 - add routes and actions for adding and removing tags
-- add avatar upload 
+- add avatar upload
+
+# Running the app
+
+```bash
+bundle install
+rails db:create
+rails db:migrate
+rails s
+```

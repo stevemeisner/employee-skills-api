@@ -1,10 +1,6 @@
-ENV['BUNDLE_GEMFILE'] ||= File.expand_path('../Gemfile', __dir__)
-
-require 'bundler/setup' # Set up gems listed in the Gemfile.
-# require 'bootsnap/setup' # Speed up boot time by caching expensive operations.
-
-# Explicitly require logger and define Logger::Severity if needed
+# Ensure Logger::Severity is defined before Rails tries to use it
 require 'logger'
+
 unless defined?(::Logger::Severity)
   ::Logger.const_set(:Severity, Module.new do
     DEBUG = 0
