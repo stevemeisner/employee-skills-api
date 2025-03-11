@@ -7,9 +7,19 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins 'http://localhost:8080'
-    resource '*',
+    origins 'employee-skills.netlify.app'
+    resource '/employees',
       headers: :any,
-      methods: [:get, :post, :put, :patch, :delete, :options, :head]
+      methods: [:get, :post, :put, :patch, :delete, :options],
+      credentials: false
+  end
+
+  # For development
+  allow do
+    origins 'localhost:8081', 'localhost:8080'
+    resource '/employees',
+      headers: :any,
+      methods: [:get, :post, :put, :patch, :delete, :options],
+      credentials: false
   end
 end
